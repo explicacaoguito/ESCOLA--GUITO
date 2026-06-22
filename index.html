@@ -18,6 +18,10 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 .menu-lateral a:hover{background:#e3f2fd;font-weight:bold}
 .container{padding:25px 20px;max-width:650px;margin:auto}
 .titulo-secao{color:#0d47a1;text-align:center;margin:40px 0 20px;font-size:26px}
+.classes-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:15px; margin-bottom:40px}
+.classe-card{background:white; padding:20px; border-radius:12px; border-left:5px solid #25D366; box-shadow:0 3px 10px rgba(0,0,0,0.08)}
+.classe-card h3{margin-top:0; color:#0d47a1; font-size:20px; margin-bottom:10px}
+.classe-card ul{margin:0 0 0 20px; line-height:2; color:#333}
 .info-box{background:white;padding:25px;border-radius:12px;margin-bottom:20px;box-shadow:0 3px 10px rgba(0,0,0,0.08)}
 .info-box h3{color:#0d47a1;margin-bottom:12px;font-size:18px}
 .info-box p{line-height:1.7;color:#444}
@@ -43,32 +47,33 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <p>Estamos localizados no bairro Campo<br> Aviação (Cabua-Buata) Junto da Escola Thulo Nguma</p>
 </div>
 
+<!-- MENU LATERAL ATUALIZADO -->
 <div id="menu" class="menu-lateral">
 <div class="fechar" onclick="fecharMenu()">✕ Fechar</div>
-<a href="#noticias" onclick="fecharMenu()">📰 Notícias</a>
+<a href="#ensino" onclick="fecharMenu()">📚 Ensino Primário</a>
+<a href="#" onclick="alert('Página Professores')">👨‍🏫 Professores</a>
+<a href="#" onclick="alert('Página Campanhas')">📣 Campanhas</a>
+<a href="#" onclick="alert('Página Avisos')">📢 Avisos</a>
+<a href="#" onclick="alert('Página Pautas')">📊 Pautas</a>
+<a href="#" onclick="alert('Sobre o Centro')">ℹ️ Sobre</a>
+<a href="#" onclick="alert('Informações Gerais')">ℹ️ Informações Gerais</a>
 <a href="alfabetizacao.html">✏️ Alfabetização</a>
 <a href="ingles.html">🌎 Inglês</a>
-<a href="https://wa.me/244942328972" target="_blank">💬 WhatsApp</a>
+<a href="https://wa.me/244942328972" target="_blank">💬 Contactos</a>
 </div>
 
 <div class="container">
 
-<!-- SÓ NOTÍCIAS, TIREI O RESTO -->
-<h2 class="titulo-secao" id="noticias">📰 Notícias</h2>
+<!-- ENSINO PRIMÁRIO NO MEIO, TIREI NOTÍCIAS E O RESTO -->
+<h2 class="titulo-secao" id="ensino">📚 Ensino Primário</h2>
 
-<div class="info-box">
-<h3>17 Abril 2026</h3>
-<p>Inscrições abertas para o ano letivo 2026! Vagas limitadas.</p>
-</div>
-
-<div class="info-box">
-<h3>10 Abril 2026</h3>
-<p>Reunião de pais e encarregados dia 25/04 às 15h no centro.</p>
-</div>
-
-<div class="info-box">
-<h3>05 Abril 2026</h3>
-<p>Feira de ciências marcada para o próximo mês. Participem!</p>
+<div class="classes-grid">
+<div class="classe-card"><h3>1ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Plástica</li></ul></div>
+<div class="classe-card"><h3>2ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Musical</li></ul></div>
+<div class="classe-card"><h3>3ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Inglês</li></ul></div>
+<div class="classe-card"><h3>4ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li></ul></div>
+<div class="classe-card"><h3>5ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Educação Visual</li></ul></div>
+<div class="classe-card"><h3>6ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Informática</li></ul></div>
 </div>
 
 </div>
