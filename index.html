@@ -46,8 +46,6 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <div id="menu" class="menu-lateral">
 <div class="fechar" onclick="fecharMenu()">✕ Fechar</div>
 <a href="#noticias" onclick="fecharMenu()">📰 Notícias</a>
-<a href="#disciplinas" onclick="fecharMenu()">📖 Disciplinas</a>
-<a href="#info" onclick="fecharMenu()">ℹ️ Informações</a>
 <a href="alfabetizacao.html">✏️ Alfabetização</a>
 <a href="ingles.html">🌎 Inglês</a>
 <a href="https://wa.me/244942328972" target="_blank">💬 WhatsApp</a>
@@ -55,7 +53,7 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 
 <div class="container">
 
-<!-- TIREI ENSINO PRIMÁRIO E CLASSES, PUS NOTÍCIAS -->
+<!-- SÓ NOTÍCIAS, TIREI O RESTO -->
 <h2 class="titulo-secao" id="noticias">📰 Notícias</h2>
 
 <div class="info-box">
@@ -73,28 +71,9 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <p>Feira de ciências marcada para o próximo mês. Participem!</p>
 </div>
 
-<h2 class="titulo-secao" id="disciplinas">📖 Todas as Disciplinas</h2>
-<div class="info-box">
-<p>Matemática • Língua Portuguesa • Ciências Naturais • História • Geografia • Inglês • Estudo do Meio • Educação Moral e Cívica • Informática • Expressão Plástica • Expressão Musical • Educação Visual</p>
 </div>
 
-<h2 class="titulo-secao" id="info">ℹ️ Informações Gerais</h2>
-
-<div class="info-box">
-<h3>Horário de Funcionamento</h3>
-<p><b>Manhã:</b> 7h30 às 12h00<br>
-<b>Tarde:</b> 13h00 às 17h30<br>
-<b>Sábado:</b> 8h00 às 12h00</p>
-</div>
-
-<div class="info-box">
-<h3>Sobre o Centro</h3>
-<p>Fundado em 2018 pelo Professor Guito. Mais de 300 alunos já passaram por aqui. Turmas com máximo 15 alunos. Taxa de aprovação de 95%.</p>
-</div>
-
-</div>
-
-<!-- BOTÕES DE BAIXO MODIFICADOS -->
+<!-- BOTÕES DE BAIXO -->
 <div class="bottom-nav">
 <div onclick="window.location='index.html'"><span>🏠</span><small>Início</small></div>
 <div onclick="abrirModal('modalMatriculas')"><span>📝</span><small>Matrículas</small></div>
@@ -102,7 +81,7 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <div onclick="abrirModal('modalPropinas')"><span>💰</span><small>Propinas</small></div>
 </div>
 
-<!-- MODAIS COM TEXTOS NOVOS -->
+<!-- MODAIS -->
 <div id="modalMatriculas" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalMatriculas')">×</span><h2>📝 Matrículas</h2><p><b>Matrículas a partir de 500 kwanzas</b></p><p>Visita-nos para mais detalhes e condições especiais.</p></div></div>
 
 <div id="modalReconfirmação" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalReconfirmação')">×</span><h2>📄 Reconfirmação</h2><p><b>A partir do mês de Agosto começam as Reconfirmações e as matrículas.</b></p><p>Traz a caderneta do aluno para confirmar a vaga.</p></div></div>
