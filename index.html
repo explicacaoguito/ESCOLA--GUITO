@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EXPLICAÇÃO GUITO</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 .topo{background:linear-gradient(135deg,#0d47a1 0%, #1976d2 50%, #42a5f5 100%);color:white;text-align:center;padding:25px 15px 50px;border-bottom-left-radius:30px;border-bottom-right-radius:30px;position:relative}
 .menu-icon{position:absolute;left:18px;top:18px;font-size:28px;cursor:pointer}
@@ -16,10 +16,15 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 .menu-lateral .fechar{padding:15px 20px;font-size:22px;color:#0d47a1;cursor:pointer;border-bottom:2px solid #eee;margin-bottom:10px;position:sticky;top:0;background:white}
 .menu-lateral a{display:block;padding:14px 20px;color:#0d47a1;text-decoration:none;border-bottom:1px solid #e3f2fd;font-size:15px}
 .menu-lateral a:hover{background:#e3f2fd;font-weight:bold}
-.container{padding:25px 20px;max-width:500px;margin:auto}
-.grid-2x2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.btn-grid{padding:20px;background:#e3f2fd;border:none;border-radius:25px;font-size:16px;color:#0d47a1;cursor:pointer;font-weight:bold;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
-.btn-grid:active{transform:scale(0.97)}
+.container{padding:25px 20px;max-width:650px;margin:auto}
+.titulo-secao{color:#0d47a1;text-align:center;margin:40px 0 20px;font-size:26px}
+.classes-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:15px; margin-bottom:40px}
+.classe-card{background:white; padding:20px; border-radius:12px; border-left:5px solid #25D366; box-shadow:0 3px 10px rgba(0,0,0,0.08)}
+.classe-card h3{margin-top:0; color:#0d47a1; font-size:20px; margin-bottom:10px}
+.classe-card ul{margin:0 0 0 20px; line-height:2; color:#333}
+.info-box{background:white;padding:25px;border-radius:12px;margin-bottom:20px;box-shadow:0 3px 10px rgba(0,0,0,0.08)}
+.info-box h3{color:#0d47a1;margin-bottom:12px;font-size:18px}
+.info-box p{line-height:1.7;color:#444}
 .bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:#0d47a1;display:flex;justify-content:space-around;padding:12px 0;color:white;font-size:11px;text-align:center;z-index:100}
 .bottom-nav div{cursor:pointer;flex:1}
 .bottom-nav div:active{opacity:0.8;background:#1565c0}
@@ -29,6 +34,7 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 </head>
 <body>
 
+<!-- TOPO -->
 <div class="topo">
 <span class="menu-icon" onclick="abrirMenu()">☰</span>
 <img src="logo.png" alt="Logo Explicação Guito">
@@ -36,38 +42,137 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <p>Estamos localizados no bairro Campo<br> Aviação (Cabua-Buata) Junto da Escola Thulo Nguma</p>
 </div>
 
-<!-- MENU LATERAL COMPLETO AGORA -->
+<!-- MENU LATERAL -->
 <div id="menu" class="menu-lateral">
 <div class="fechar" onclick="fecharMenu()">✕ Fechar</div>
-<a href="ensino.html">📚 Ensino Primário</a>
+<a href="#ensino" onclick="fecharMenu()">📚 Ensino Primário</a>
+<a href="#disciplinas" onclick="fecharMenu()">📖 Disciplinas</a>
+<a href="#info" onclick="fecharMenu()">ℹ️ Informações</a>
 <a href="alfabetizacao.html">✏️ Alfabetização</a>
 <a href="ingles.html">🌎 Inglês</a>
-<a href="#" onclick="alert('Página Disciplinas')">📖 Disciplinas</a>
-<a href="#" onclick="alert('Página Classes')">🏫 Classes</a>
-<a href="#" onclick="alert('Página Professores')">👨‍🏫 Professores</a>
-<a href="#" onclick="alert('Página Avisos')">📢 Avisos</a>
-<a href="#" onclick="alert('Página Atividades')">📝 Atividades</a>
-<a href="#" onclick="alert('Página Pauta')">📊 Pauta</a>
-<a href="#" onclick="alert('Página Campanhas')">📣 Campanhas</a>
-<a href="https://wa.me/244942328972" target="_blank">📞 Contactos</a>
+<a href="https://wa.me/244942328972" target="_blank">💬 WhatsApp</a>
 </div>
 
-<!-- 4 BOTÕES 2x2 NO MEIO -->
 <div class="container">
-<div class="grid-2x2">
-<button class="btn-grid" onclick="alert('Académico')">Academico</button>
-<button class="btn-grid" onclick="alert('Institucional')">Institucional</button>
-<button class="btn-grid" onclick="alert('Informações')">Informações</button>
-<button class="btn-grid" onclick="alert('Classes')">Classes</button>
+
+<!-- SEÇÃO ENSINO PRIMÁRIO COM 6 CLASSES -->
+<h2 class="titulo-secao" id="ensino">📚 Ensino Primário</h2>
+
+<div class="classes-grid">
+<div class="classe-card">
+<h3>1ª Classe</h3>
+<ul>
+<li>Matemática</li>
+<li>Língua Portuguesa</li>
+<li>Estudo do Meio</li>
+<li>Educação Moral e Cívica</li>
+<li>Expressão Plástica</li>
+</ul>
+</div>
+
+<div class="classe-card">
+<h3>2ª Classe</h3>
+<ul>
+<li>Matemática</li>
+<li>Língua Portuguesa</li>
+<li>Estudo do Meio</li>
+<li>Educação Moral e Cívica</li>
+<li>Expressão Musical</li>
+</ul>
+</div>
+
+<div class="classe-card">
+<h3>3ª Classe</h3>
+<ul>
+<li>Matemática</li>
+<li>Língua Portuguesa</li>
+<li>Estudo do Meio</li>
+<li>Educação Moral e Cívica</li>
+<li>Inglês</li>
+</ul>
+</div>
+
+<div class="classe-card">
+<h3>4ª Classe</h3>
+<ul>
+<li>Matemática</li>
+<li>Língua Portuguesa</li>
+<li>Ciências Naturais</li>
+<li>História</li>
+<li>Geografia</li>
+<li>Inglês</li>
+</ul>
+</div>
+
+<div class="classe-card">
+<h3>5ª Classe</h3>
+<ul>
+<li>Matemática</li>
+<li>Língua Portuguesa</li>
+<li>Ciências Naturais</li>
+<li>História</li>
+<li>Geografia</li>
+<li>Inglês</li>
+<li>Educação Visual</li>
+</ul>
+</div>
+
+<div class="classe-card">
+<h3>6ª Classe</h3>
+<ul>
+<li>Matemática</li>
+<li>Língua Portuguesa</li>
+<li>Ciências Naturais</li>
+<li>História</li>
+<li>Geografia</li>
+<li>Inglês</li>
+<li>Informática</li>
+</ul>
 </div>
 </div>
 
-<!-- 4 BOTÕES EM BAIXO -->
+<!-- SEÇÃO DISCIPLINAS -->
+<h2 class="titulo-secao" id="disciplinas">📖 Todas as Disciplinas</h2>
+<div class="info-box">
+<p>Matemática • Língua Portuguesa • Ciências Naturais • História • Geografia • Inglês • Estudo do Meio • Educação Moral e Cívica • Informática • Expressão Plástica • Expressão Musical • Educação Visual</p>
+</div>
+
+<!-- SEÇÃO INFORMAÇÕES -->
+<h2 class="titulo-secao" id="info">ℹ️ Informações Gerais</h2>
+
+<div class="info-box">
+<h3>Horário de Funcionamento</h3>
+<p><b>Manhã:</b> 7h30 às 12h00<br>
+<b>Tarde:</b> 13h00 às 17h30<br>
+<b>Sábado:</b> 8h00 às 12h00</p>
+</div>
+
+<div class="info-box">
+<h3>Reconfirmação & Matrículas 2026</h3>
+<p><b>Período:</b> 2 a 30 de Janeiro 2026<br>
+<b>Documentos:</b> Cópia do BI ou Assento, 2 fotos tipo passe, Caderneta 2025<br>
+<b>Propina:</b> 8.000 KZ mensal + 5.000 KZ matrícula</p>
+</div>
+
+<div class="info-box">
+<h3>Sobre o Centro</h3>
+<p>Fundado em 2018 pelo Professor Guito. Mais de 300 alunos já passaram por aqui. Turmas com máximo 15 alunos. Taxa de aprovação de 95%. Foco total no sucesso do teu filho.</p>
+</div>
+
+<div class="info-box">
+<h3>Contactos</h3>
+<p><b>Telefone/WhatsApp:</b> 942 328 972<br>
+<b>Localização:</b> Bairro Campo Aviação, junto da Escola Thulo Nguma</p>
+</div>
+
+</div>
+
+<!-- BOTÕES EM BAIXO -->
 <div class="bottom-nav">
-<div onclick="window.location='index.html'"><span>🏠</span><small>Angola</small></div>
-<div onclick="alert('Reconfirmação Novos Alunos')"><span>📄</span><small>Reconfirmação<br>Novos Alunos</small></div>
-<div onclick="alert('Informações')"><span>🔍</span><small>Informações</small></div>
-<div onclick="alert('Classes')"><span>✓</span><small>Classes</small></div>
+<div onclick="window.location='index.html'"><span>🏠</span><small>Início</small></div>
+<div onclick="document.getElementById('info').scrollIntoView()"><span>📞</span><small>Contactos</small></div>
+<div onclick="window.scrollTo({top:0, behavior:'smooth'})"><span>⬆️</span><small>Subir</small></div>
+<div onclick="abrirMenu()"><span>☰</span><small>Menu</small></div>
 </div>
 
 <script>
