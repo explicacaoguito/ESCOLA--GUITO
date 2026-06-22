@@ -20,6 +20,13 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 .grid-2x2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .btn-grid{padding:20px;background:#e3f2fd;border:none;border-radius:25px;font-size:16px;color:#0d47a1;cursor:pointer;font-weight:bold;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
 .btn-grid:active{transform:scale(0.97)}
+.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6)}
+.modal-conteudo{background:white;margin:10% auto;padding:25px;border-radius:20px;width:85%;max-width:400px;max-height:70vh;overflow-y:auto}
+.modal-conteudo h2{color:#0d47a1;margin-bottom:15px;font-size:20px}
+.modal-conteudo p, .modal-conteudo li{color:#333;line-height:1.6;margin-bottom:10px}
+.modal-conteudo ul{margin-left:20px}
+.fechar-modal{float:right;font-size:28px;color:#aaa;cursor:pointer}
+.fechar-modal:hover{color:#000}
 .bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:#0d47a1;display:flex;justify-content:space-around;padding:12px 0;color:white;font-size:11px;text-align:center;z-index:100}
 .bottom-nav div{cursor:pointer;flex:1}
 .bottom-nav div:active{opacity:0.8;background:#1565c0}
@@ -36,33 +43,148 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <p>Estamos localizados no bairro Campo<br>dera Aviação (Cabua-Buata) Junto da Escola Thulo Nguma</p>
 </div>
 
-<!-- MENU LATERAL COMPLETO AGORA -->
+<!-- MENU LATERAL COMPLETO -->
 <div id="menu" class="menu-lateral">
 <div class="fechar" onclick="fecharMenu()">✕ Fechar</div>
 <a href="ensino.html">📚 Ensino Primário</a>
 <a href="alfabetizacao.html">✏️ Alfabetização</a>
 <a href="ingles.html">🌎 Inglês</a>
-<a href="#" onclick="alert('Página Disciplinas')">📖 Disciplinas</a>
-<a href="#" onclick="alert('Página Classes')">🏫 Classes</a>
-<a href="#" onclick="alert('Página Professores')">👨‍🏫 Professores</a>
-<a href="#" onclick="alert('Página Avisos')">📢 Avisos</a>
-<a href="#" onclick="alert('Página Atividades')">📝 Atividades</a>
-<a href="#" onclick="alert('Página Pauta')">📊 Pauta</a>
-<a href="#" onclick="alert('Página Campanhas')">📣 Campanhas</a>
-<a href="#" onclick="alert('Página Contactos')">📞 Contactos</a>
+<a href="#" onclick="abrirModal('modal-disciplinas')">📖 Disciplinas</a>
+<a href="#" onclick="abrirModal('modal-classes')">🏫 Classes</a>
+<a href="#" onclick="abrirModal('modal-professores')">👨‍🏫 Professores</a>
+<a href="#" onclick="abrirModal('modal-avisos')">📢 Avisos</a>
+<a href="#" onclick="abrirModal('modal-atividades')">📝 Atividades</a>
+<a href="#" onclick="abrirModal('modal-pauta')">📊 Pauta</a>
+<a href="#" onclick="abrirModal('modal-campanhas')">📣 Campanhas</a>
+<a href="#" onclick="abrirModal('modal-contactos')">📞 Contactos</a>
 </div>
 
 <!-- 4 BOTÕES 2x2 NO MEIO -->
 <div class="container">
 <div class="grid-2x2">
-<button class="btn-grid" onclick="alert('Académico')">Academico</button>
-<button class="btn-grid" onclick="alert('Institucional')">Institucional</button>
-<button class="btn-grid" onclick="alert('Informações')">Informações</button>
-<button class="btn-grid" onclick="alert('Classes')">Classes</button>
+<button class="btn-grid" onclick="abrirModal('modal-academico')">Academico</button>
+<button class="btn-grid" onclick="abrirModal('modal-institucional')">Institucional</button>
+<button class="btn-grid" onclick="abrirModal('modal-info')">Informações</button>
+<button class="btn-grid" onclick="abrirModal('modal-classes')">Classes</button>
 </div>
 </div>
 
-<!-- 4 BOTÕES EM BAIXO -->
+<!-- MODAIS COM CONTEÚDO -->
+<div id="modal-angola" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-angola')">&times;</span>
+<h2>🏠 Angola - Sobre Nós</h2>
+<p><b>Explicação Guito</b> é um centro de explicações localizado em Luanda, Angola.</p>
+<p><b>Endereço:</b> Bairro Campo de Aviação, Cabua-Buata, junto da Escola Thulo Nguma</p>
+<p><b>Contacto:</b> +244 9XX XXX</p>
+<p>Trabalhamos com ensino de qualidade desde a alfabetização até ao ensino médio.</p>
+</div>
+</div>
+
+<div id="modal-reconfirma" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-reconfirma')">&times;</span>
+<h2>📄 Reconfirmação Novos Alunos</h2>
+<p><b>Exemplos de alunos reconfirmados:</b></p>
+<ul>
+<li><b>1. João Pedro Silva</b> - 6ª Classe - Turno Manhã</li>
+<li><b>2. Maria da Conceição</b> - 4ª Classe - Turno Tarde</li>
+</ul>
+<p>Para reconfirmar, fala com a secretaria ou clica nos 3 tracinhos ☰ → Contactos</p>
+</div>
+</div>
+
+<div id="modal-info" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-info')">&times;</span>
+<h2>🔍 Informações</h2>
+<p><b>Horários de funcionamento:</b></p>
+<p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+<p><b>Regras importantes:</b></p>
+<ul>
+<li>Chegar 10min antes da aula</li>
+<li>Trazer material escolar completo</li>
+<li>Pagamento até dia 5 de cada mês</li>
+</ul>
+</div>
+</div>
+
+<div id="modal-classes" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-classes')">&times;</span>
+<h2>✓ Classes Disponíveis</h2>
+<ul>
+<li>Iniciação</li>
+<li>1ª Classe</li>
+<li>2ª Classe</li>
+<li>3ª Classe</li>
+<li>4ª Classe</li>
+<li>5ª Classe</li>
+<li>6ª Classe</li>
+<li>Alfabetização</li>
+<li>Inglês Básico</li>
+<li>Inglês Intermédio</li>
+</ul>
+</div>
+</div>
+
+<div id="modal-disciplinas" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-disciplinas')">&times;</span>
+<h2>📖 Disciplinas</h2>
+<p>Matemática, Língua Portuguesa, Estudo do Meio, Inglês, Educação Física</p>
+</div>
+</div>
+
+<div id="modal-professores" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-professores')">&times;</span>
+<h2>👨‍🏫 Professores</h2>
+<p>Equipa qualificada com experiência em ensino primário e alfabetização.</p>
+</div>
+</div>
+
+<div id="modal-avisos" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-avisos')">&times;</span>
+<h2>📢 Avisos</h2>
+<p>Provas mensais começam dia 15. Pais, verifiquem as pautas no portal.</p>
+</div>
+</div>
+
+<div id="modal-atividades" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-atividades')">&times;</span>
+<h2>📝 Atividades</h2>
+<p>Feira de Ciências - 30 de Abril<br>Jogos Interclasses - Maio</p>
+</div>
+</div>
+
+<div id="modal-pauta" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-pauta')">&times;</span>
+<h2>📊 Pauta</h2>
+<p>Consulte as notas com o professor da turma ou na secretaria.</p>
+</div>
+</div>
+
+<div id="modal-campanhas" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-campanhas')">&times;</span>
+<h2>📣 Campanhas</h2>
+<p>Inscrições abertas para Alfabetização 2026. Desconto para irmãos!</p>
+</div>
+</div>
+
+<div id="modal-contactos" class="modal">
+<div class="modal-conteudo">
+<span class="fechar-modal" onclick="fecharModal('modal-contactos')">&times;</span>
+<h2>📞 Contactos</h2>
+<p>Tel: +244 9XX XXX<br>WhatsApp: +244 9XX XXX<br>Email: explicacaoguito@gmail.com</p>
+</div>
+</div>
+
+ <!-- 4 BOTÕES EM BAIXO -->
 <div class="bottom-nav">
 <div onclick="window.location='index.html'"><span>🏠</span><small>Angola</small></div>
 <div onclick="alert('Reconfirmação Novos Alunos')"><span>📄</span><small>Reconfirmação<br>Novos Alunos</small></div>
