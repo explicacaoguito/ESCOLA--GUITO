@@ -6,24 +6,25 @@
 <title>EXPLICAÇÃO GUITO</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:70px}
-.topo{background:linear-gradient(180deg,#0d47a1 0%, #1976d2 50%, #42a5f5 100%);color:white;text-align:center;padding:20px 15px 45px;border-bottom-left-radius:25px;border-bottom-right-radius:25px;position:relative}
-.menu-icon{position:absolute;left:18px;top:18px;font-size:28px;cursor:pointer;font-weight:bold}
-.topo img{width:85px;height:85px;border-radius:50%;border:4px solid white;margin-bottom:12px;object-fit:cover}
-.topo h1{margin:8px 0;font-size:26px;font-weight:bold}
-.topo p{font-size:13px;margin:0;opacity:0.95;line-height:1.4;padding:0 10px}
+body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
+.topo{background:linear-gradient(135deg,#0d47a1 0%, #1976d2 50%, #42a5f5 100%);color:white;text-align:center;padding:25px 15px 50px;border-bottom-left-radius:30px;border-bottom-right-radius:30px;position:relative}
+.menu-icon{position:absolute;left:18px;top:18px;font-size:28px;cursor:pointer}
+.topo img{width:90px;height:90px;border-radius:50%;border:4px solid white;margin-bottom:15px;object-fit:cover}
+.topo h1{margin:10px 0;font-size:28px;font-weight:bold}
+.topo p{font-size:13px;margin:0;opacity:0.95;line-height:1.5;padding:0 15px}
 .menu-lateral{display:none;position:fixed;left:0;top:0;width:260px;height:100%;background:white;box-shadow:2px 0 15px rgba(0,0,0,0.3);z-index:999;padding-top:20px}
 .menu-lateral .fechar{padding:15px 20px;font-size:22px;color:#0d47a1;cursor:pointer;border-bottom:2px solid #eee;margin-bottom:10px}
 .menu-lateral a{display:block;padding:16px 20px;color:#0d47a1;text-decoration:none;border-bottom:1px solid #e3f2fd;font-size:16px}
 .menu-lateral a:hover{background:#e3f2fd;font-weight:bold}
-.container{padding:20px;max-width:500px;margin:auto}
-.btn{width:100%;padding:18px;margin:12px 0;background:#e3f2fd;border:none;border-radius:15px;font-size:17px;color:#0d47a1;cursor:pointer;font-weight:bold;box-shadow:0 2px 5px rgba(0,0,0,0.08)}
-.btn:active{transform:scale(0.98)}
-.bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:#0d47a1;display:flex;justify-content:space-around;padding:10px 0;color:white;font-size:11px;text-align:center;z-index:100}
+.container{padding:25px 20px;max-width:500px;margin:auto}
+.grid-2x2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.btn-grid{padding:20px;background:#e3f2fd;border:none;border-radius:25px;font-size:16px;color:#0d47a1;cursor:pointer;font-weight:bold;box-shadow:0 3px 8px rgba(0,0,0,0.1)}
+.btn-grid:active{transform:scale(0.97)}
+.bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:#0d47a1;display:flex;justify-content:space-around;padding:12px 0;color:white;font-size:11px;text-align:center;z-index:100}
 .bottom-nav div{cursor:pointer;flex:1}
-.bottom-nav div:active{opacity:0.7}
-.bottom-nav span{font-size:22px;display:block}
-.bottom-nav small{display:block;margin-top:3px}
+.bottom-nav div:active{opacity:0.8;background:#1565c0}
+.bottom-nav span{font-size:26px;display:block;margin-bottom:4px}
+.bottom-nav small{display:block;font-weight:bold;line-height:1.2}
 </style>
 </head>
 <body>
@@ -32,10 +33,37 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:70px}
 <span class="menu-icon" onclick="abrirMenu()">☰</span>
 <img src="logo.png" alt="Logo Explicação Guito">
 <h1>EXPLICAÇÃO GUITO</h1>
-<p>Estamos localizados no bairro Campo de Aviação(Cabua-Buata) Junto da Escola Thulo Nguma.</p>
+<p>Estamos localizados no bairro Campo<br>dera Aviação (Cabua-Buata) Junto da Escola Thulo Nguma</p>
 </div>
 
 <div id="menu" class="menu-lateral">
 <div class="fechar" onclick="fecharMenu()">✕ Fechar</div>
 <a href="ensino.html">📚 Ensino Primário</a>
-<a href="alfabetizacao.html">✏
+<a href="alfabetizacao.html">✏️ Alfabetização</a>
+<a href="ingles.html">🌎 Inglês</a>
+</div>
+
+<!-- 4 BOTÕES 2x2 COMO NA IMAGEM -->
+<div class="container">
+<div class="grid-2x2">
+<button class="btn-grid" onclick="alert('Académico')">Academico</button>
+<button class="btn-grid" onclick="alert('Institucional')">Institucional</button>
+<button class="btn-grid" onclick="alert('Informações')">Informações</button>
+<button class="btn-grid" onclick="alert('Classes')">Classes</button>
+</div>
+</div>
+
+<!-- 4 BOTÕES EM BAIXO COM ÍCONES COMO NA IMAGEM -->
+<div class="bottom-nav">
+<div onclick="window.location='index.html'"><span>🏠</span><small>Angola</small></div>
+<div onclick="alert('Reconfirmação Novos Alunos')"><span>📄</span><small>Reconfirmação<br>Novos Alunos</small></div>
+<div onclick="alert('Informações')"><span>🔍</span><small>Informações</small></div>
+<div onclick="alert('Classes')"><span>✓</span><small>Classes</small></div>
+</div>
+
+<script>
+function abrirMenu(){document.getElementById('menu').style.display='block'}
+function fecharMenu(){document.getElementById('menu').style.display='none'}
+</script>
+</body>
+</html>
