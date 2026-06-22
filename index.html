@@ -30,11 +30,16 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 .bottom-nav div:active{opacity:0.8;background:#1565c0}
 .bottom-nav span{font-size:26px;display:block;margin-bottom:4px}
 .bottom-nav small{display:block;font-weight:bold;line-height:1.2}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:1000;overflow-y:auto}
+.modal-content{background:white;margin:50px auto;padding:25px;border-radius:15px;max-width:450px;position:relative}
+.modal-content h2{color:#0d47a1;margin-bottom:15px}
+.modal-content p{line-height:1.6;color:#333;margin-bottom:10px}
+.fechar-modal{position:absolute;top:10px;right:15px;font-size:28px;color:#999;cursor:pointer}
+.fechar-modal:hover{color:#000}
 </style>
 </head>
 <body>
 
-<!-- TOPO -->
 <div class="topo">
 <span class="menu-icon" onclick="abrirMenu()">☰</span>
 <img src="logo.png" alt="Logo Explicação Guito">
@@ -42,7 +47,6 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <p>Estamos localizados no bairro Campo<br> Aviação (Cabua-Buata) Junto da Escola Thulo Nguma</p>
 </div>
 
-<!-- MENU LATERAL -->
 <div id="menu" class="menu-lateral">
 <div class="fechar" onclick="fecharMenu()">✕ Fechar</div>
 <a href="#ensino" onclick="fecharMenu()">📚 Ensino Primário</a>
@@ -55,89 +59,22 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 
 <div class="container">
 
-<!-- SEÇÃO ENSINO PRIMÁRIO COM 6 CLASSES -->
 <h2 class="titulo-secao" id="ensino">📚 Ensino Primário</h2>
 
 <div class="classes-grid">
-<div class="classe-card">
-<h3>1ª Classe</h3>
-<ul>
-<li>Matemática</li>
-<li>Língua Portuguesa</li>
-<li>Estudo do Meio</li>
-<li>Educação Moral e Cívica</li>
-<li>Expressão Plástica</li>
-</ul>
+<div class="classe-card"><h3>1ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Plástica</li></ul></div>
+<div class="classe-card"><h3>2ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Musical</li></ul></div>
+<div class="classe-card"><h3>3ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Inglês</li></ul></div>
+<div class="classe-card"><h3>4ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li></ul></div>
+<div class="classe-card"><h3>5ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Educação Visual</li></ul></div>
+<div class="classe-card"><h3>6ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Informática</li></ul></div>
 </div>
 
-<div class="classe-card">
-<h3>2ª Classe</h3>
-<ul>
-<li>Matemática</li>
-<li>Língua Portuguesa</li>
-<li>Estudo do Meio</li>
-<li>Educação Moral e Cívica</li>
-<li>Expressão Musical</li>
-</ul>
-</div>
-
-<div class="classe-card">
-<h3>3ª Classe</h3>
-<ul>
-<li>Matemática</li>
-<li>Língua Portuguesa</li>
-<li>Estudo do Meio</li>
-<li>Educação Moral e Cívica</li>
-<li>Inglês</li>
-</ul>
-</div>
-
-<div class="classe-card">
-<h3>4ª Classe</h3>
-<ul>
-<li>Matemática</li>
-<li>Língua Portuguesa</li>
-<li>Ciências Naturais</li>
-<li>História</li>
-<li>Geografia</li>
-<li>Inglês</li>
-</ul>
-</div>
-
-<div class="classe-card">
-<h3>5ª Classe</h3>
-<ul>
-<li>Matemática</li>
-<li>Língua Portuguesa</li>
-<li>Ciências Naturais</li>
-<li>História</li>
-<li>Geografia</li>
-<li>Inglês</li>
-<li>Educação Visual</li>
-</ul>
-</div>
-
-<div class="classe-card">
-<h3>6ª Classe</h3>
-<ul>
-<li>Matemática</li>
-<li>Língua Portuguesa</li>
-<li>Ciências Naturais</li>
-<li>História</li>
-<li>Geografia</li>
-<li>Inglês</li>
-<li>Informática</li>
-</ul>
-</div>
-</div>
-
-<!-- SEÇÃO DISCIPLINAS -->
 <h2 class="titulo-secao" id="disciplinas">📖 Todas as Disciplinas</h2>
 <div class="info-box">
 <p>Matemática • Língua Portuguesa • Ciências Naturais • História • Geografia • Inglês • Estudo do Meio • Educação Moral e Cívica • Informática • Expressão Plástica • Expressão Musical • Educação Visual</p>
 </div>
 
-<!-- SEÇÃO INFORMAÇÕES -->
 <h2 class="titulo-secao" id="info">ℹ️ Informações Gerais</h2>
 
 <div class="info-box">
@@ -148,36 +85,35 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 </div>
 
 <div class="info-box">
-<h3>Reconfirmação & Matrículas 2026</h3>
-<p><b>Período:</b> 2 a 30 de Janeiro 2026<br>
-<b>Documentos:</b> Cópia do BI ou Assento, 2 fotos tipo passe, Caderneta 2025<br>
-<b>Propina:</b> 8.000 KZ mensal + 5.000 KZ matrícula</p>
-</div>
-
-<div class="info-box">
 <h3>Sobre o Centro</h3>
-<p>Fundado em 2018 pelo Professor Guito. Mais de 300 alunos já passaram por aqui. Turmas com máximo 15 alunos. Taxa de aprovação de 95%. Foco total no sucesso do teu filho.</p>
-</div>
-
-<div class="info-box">
-<h3>Contactos</h3>
-<p><b>Telefone/WhatsApp:</b> 942 328 972<br>
-<b>Localização:</b> Bairro Campo Aviação, junto da Escola Thulo Nguma</p>
+<p>Fundado em 2018 pelo Professor Guito. Mais de 300 alunos já passaram por aqui. Turmas com máximo 15 alunos. Taxa de aprovação de 95%.</p>
 </div>
 
 </div>
 
-<!-- BOTÕES EM BAIXO -->
+<!-- BOTÕES DE BAIXO CORRIGIDOS -->
 <div class="bottom-nav">
-<div onclick="window.location='index.html'"><span>🏠</span><small>Início</small></div>
-<div onclick="document.getElementById('info').scrollIntoView()"><span>📞</span><small>Contactos</small></div>
-<div onclick="window.scrollTo({top:0, behavior:'smooth'})"><span>⬆️</span><small>Subir</small></div>
-<div onclick="abrirMenu()"><span>☰</span><small>Menu</small></div>
+<div onclick="abrirModal('modalNoticias')"><span>📰</span><small>Notícias</small></div>
+<div onclick="abrirModal('modalMatriculas')"><span>📝</span><small>Matrículas</small></div>
+<div onclick="abrirModal('modalReconfirmação')"><span>📄</span><small>Reconfirmação</small></div>
+<div onclick="abrirModal('modalPauta')"><span>📊</span><small>Pauta</small></div>
 </div>
+
+<!-- MODAIS DOS 4 BOTÕES -->
+<div id="modalNoticias" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalNoticias')">×</span><h2>📰 Notícias</h2><p><b>17 Abr 2026:</b> Inscrições abertas para 2026!</p><p><b>10 Abr 2026:</b> Reunião de pais dia 25/04 às 15h.</p><p><b>05 Abr 2026:</b> Feira de ciências no próximo mês.</p></div></div>
+
+<div id="modalMatriculas" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalMatriculas')">×</span><h2>📝 Matrículas 2026</h2><p><b>Período:</b> 2 a 30 de Janeiro 2026</p><p><b>Documentos:</b> Cópia do BI/Assento, 2 fotos tipo passe, Caderneta 2025</p><p><b>Valor:</b> 5.000 KZ matrícula + 8.000 KZ mensal</p><p>Visita-nos para mais detalhes!</p></div></div>
+
+<div id="modalReconfirmação" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalReconfirmação')">×</span><h2>📄 Reconfirmação 2026</h2><p><b>Período:</b> 2 a 30 de Janeiro 2026</p><p><b>Para quem:</b> Alunos que já estudam conosco</p><p><b>Documento:</b> Trazer caderneta 2025</p><p><b>Desconto:</b> 10% para pagamento anual</p></div></div>
+
+<div id="modalPauta" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalPauta')">×</span><h2>📊 Pauta Mensal</h2><p>As pautas são afixadas todo dia 5 de cada mês.</p><p><b>Como consultar:</b> Vem à escola ou fala no WhatsApp 942 328 972</p><p>Próxima pauta: 05 de Maio 2026</p></div></div>
 
 <script>
 function abrirMenu(){document.getElementById('menu').style.display='block'}
 function fecharMenu(){document.getElementById('menu').style.display='none'}
+function abrirModal(id){document.getElementById(id).style.display='block'}
+function fecharModal(id){document.getElementById(id).style.display='none'}
+window.onclick=function(event){if(event.target.classList.contains('modal')){event.target.style.display='none'}}
 </script>
 </body>
 </html>
