@@ -18,10 +18,6 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 .menu-lateral a:hover{background:#e3f2fd;font-weight:bold}
 .container{padding:25px 20px;max-width:650px;margin:auto}
 .titulo-secao{color:#0d47a1;text-align:center;margin:40px 0 20px;font-size:26px}
-.classes-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:15px; margin-bottom:40px}
-.classe-card{background:white; padding:20px; border-radius:12px; border-left:5px solid #25D366; box-shadow:0 3px 10px rgba(0,0,0,0.08)}
-.classe-card h3{margin-top:0; color:#0d47a1; font-size:20px; margin-bottom:10px}
-.classe-card ul{margin:0 0 0 20px; line-height:2; color:#333}
 .info-box{background:white;padding:25px;border-radius:12px;margin-bottom:20px;box-shadow:0 3px 10px rgba(0,0,0,0.08)}
 .info-box h3{color:#0d47a1;margin-bottom:12px;font-size:18px}
 .info-box p{line-height:1.7;color:#444}
@@ -49,7 +45,7 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 
 <div id="menu" class="menu-lateral">
 <div class="fechar" onclick="fecharMenu()">✕ Fechar</div>
-<a href="#ensino" onclick="fecharMenu()">📚 Ensino Primário</a>
+<a href="#noticias" onclick="fecharMenu()">📰 Notícias</a>
 <a href="#disciplinas" onclick="fecharMenu()">📖 Disciplinas</a>
 <a href="#info" onclick="fecharMenu()">ℹ️ Informações</a>
 <a href="alfabetizacao.html">✏️ Alfabetização</a>
@@ -59,15 +55,22 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 
 <div class="container">
 
-<h2 class="titulo-secao" id="ensino">📚 Ensino Primário</h2>
+<!-- TIREI ENSINO PRIMÁRIO E CLASSES, PUS NOTÍCIAS -->
+<h2 class="titulo-secao" id="noticias">📰 Notícias</h2>
 
-<div class="classes-grid">
-<div class="classe-card"><h3>1ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Plástica</li></ul></div>
-<div class="classe-card"><h3>2ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Musical</li></ul></div>
-<div class="classe-card"><h3>3ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Inglês</li></ul></div>
-<div class="classe-card"><h3>4ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li></ul></div>
-<div class="classe-card"><h3>5ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Educação Visual</li></ul></div>
-<div class="classe-card"><h3>6ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Informática</li></ul></div>
+<div class="info-box">
+<h3>17 Abril 2026</h3>
+<p>Inscrições abertas para o ano letivo 2026! Vagas limitadas.</p>
+</div>
+
+<div class="info-box">
+<h3>10 Abril 2026</h3>
+<p>Reunião de pais e encarregados dia 25/04 às 15h no centro.</p>
+</div>
+
+<div class="info-box">
+<h3>05 Abril 2026</h3>
+<p>Feira de ciências marcada para o próximo mês. Participem!</p>
 </div>
 
 <h2 class="titulo-secao" id="disciplinas">📖 Todas as Disciplinas</h2>
@@ -91,22 +94,20 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 
 </div>
 
-<!-- BOTÕES DE BAIXO CORRIGIDOS -->
+<!-- BOTÕES DE BAIXO MODIFICADOS -->
 <div class="bottom-nav">
-<div onclick="abrirModal('modalNoticias')"><span>📰</span><small>Notícias</small></div>
+<div onclick="window.location='index.html'"><span>🏠</span><small>Início</small></div>
 <div onclick="abrirModal('modalMatriculas')"><span>📝</span><small>Matrículas</small></div>
 <div onclick="abrirModal('modalReconfirmação')"><span>📄</span><small>Reconfirmação</small></div>
-<div onclick="abrirModal('modalPauta')"><span>📊</span><small>Pauta</small></div>
+<div onclick="abrirModal('modalPropinas')"><span>💰</span><small>Propinas</small></div>
 </div>
 
-<!-- MODAIS DOS 4 BOTÕES -->
-<div id="modalNoticias" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalNoticias')">×</span><h2>📰 Notícias</h2><p><b>17 Abr 2026:</b> Inscrições abertas para 2026!</p><p><b>10 Abr 2026:</b> Reunião de pais dia 25/04 às 15h.</p><p><b>05 Abr 2026:</b> Feira de ciências no próximo mês.</p></div></div>
+<!-- MODAIS COM TEXTOS NOVOS -->
+<div id="modalMatriculas" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalMatriculas')">×</span><h2>📝 Matrículas</h2><p><b>Matrículas a partir de 500 kwanzas</b></p><p>Visita-nos para mais detalhes e condições especiais.</p></div></div>
 
-<div id="modalMatriculas" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalMatriculas')">×</span><h2>📝 Matrículas 2026</h2><p><b>Período:</b> 2 a 30 de Janeiro 2026</p><p><b>Documentos:</b> Cópia do BI/Assento, 2 fotos tipo passe, Caderneta 2025</p><p><b>Valor:</b> 5.000 KZ matrícula + 8.000 KZ mensal</p><p>Visita-nos para mais detalhes!</p></div></div>
+<div id="modalReconfirmação" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalReconfirmação')">×</span><h2>📄 Reconfirmação</h2><p><b>A partir do mês de Agosto começam as Reconfirmações e as matrículas.</b></p><p>Traz a caderneta do aluno para confirmar a vaga.</p></div></div>
 
-<div id="modalReconfirmação" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalReconfirmação')">×</span><h2>📄 Reconfirmação 2026</h2><p><b>Período:</b> 2 a 30 de Janeiro 2026</p><p><b>Para quem:</b> Alunos que já estudam conosco</p><p><b>Documento:</b> Trazer caderneta 2025</p><p><b>Desconto:</b> 10% para pagamento anual</p></div></div>
-
-<div id="modalPauta" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalPauta')">×</span><h2>📊 Pauta Mensal</h2><p>As pautas são afixadas todo dia 5 de cada mês.</p><p><b>Como consultar:</b> Vem à escola ou fala no WhatsApp 942 328 972</p><p>Próxima pauta: 05 de Maio 2026</p></div></div>
+<div id="modalPropinas" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalPropinas')">×</span><h2>💰 Propinas</h2><p><b>Propinas a partir de 500 kwanzas</b></p><p>Valores acessíveis para todos. Fala conosco para planos de pagamento.</p></div></div>
 
 <script>
 function abrirMenu(){document.getElementById('menu').style.display='block'}
