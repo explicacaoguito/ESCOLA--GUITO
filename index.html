@@ -1,75 +1,101 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EXPLICAÇÃO GUITO</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght=700&family=Poppins:wght@400;600&display=swap');
-body{font-family:'Poppins',Arial,sans-serif;margin:0;background:#f5f5f5}
-header{background:linear-gradient(135deg,#1a3a6e 0%,#2c5aa0 100%);color:white;text-align:center;padding:20px 15px}
-header h1{font-family:'Montserrat',sans-serif;font-size:34px;margin:0 0 10px 0;letter-spacing:2px;text-shadow:2px 2px 4px rgba(0,0,0,0.3)}
-header img{width:120px;height:120px;border-radius:15px;border:3px solid white;box-shadow:0 4px 8px rgba(0,0,0,0.3);margin-bottom:8px}
-header .prof{font-size:16px;color:#ffd700;font-style:italic;font-weight:600;display:block}
-nav{background:#1a3a6e}
-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center}
-nav li{position:relative}
-nav a{display:block;color:white;text-decoration:none;padding:12px 15px;font-size:14px}
-nav a:hover{background:#0f2550}
-nav li ul{display:none;position:absolute;background:#0f2550;min-width:160px;z-index:1;left:0;top:100%}
-nav li:hover ul{display:block}
-nav li ul li a{padding:10px 15px}
-.container{padding:20px;max-width:700px;margin:auto;background:white;min-height:300px;border-radius:8px;margin-top:15px}
-.aviso{background:#d4edda;border-left:4px solid #28a745;padding:10px;margin:15px 0;border-radius:4px}
-footer{background:#1a3a6e;color:white;text-align:center;padding:12px;font-size:12px;margin-top:20px}
-h2{color:#1a3a6e}
-@media(max-width:600px){nav ul{flex-direction:column} nav li ul{position:static} header h1{font-size:28px} header img{width:100px;height:100px}}
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+}
+.secao-btn {
+  width: 100%;
+  padding: 18px;
+  margin: 10px 0;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.secao-btn:hover {
+  background: #1e40af;
+}
+.subsecoes {
+  display: none;
+  background: white;
+  padding: 15px;
+  border-radius: 0 0 12px 12px;
+  margin: -10px 0 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.subsecoes a {
+  display: block;
+  padding: 14px;
+  color: #1e3a8a;
+  text-decoration: none;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 16px;
+}
+.subsecoes a:last-child {
+  border-bottom: none;
+}
+.subsecoes a:hover {
+  background: #eff6ff;
+  border-radius: 6px;
+}
 </style>
 </head>
 <body>
-<header>
+
 <h1>EXPLICAÇÃO GUITO</h1>
-<img src="logo.png" alt="Logo EXPLICAÇÃO GUITO ABC">
-<span class="prof">professor Lírio</span>
-</header>
-<nav>
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><a href="#">Ensino Primário ▼</a>
-  <ul>
-  <li><a href="iniciacao.html">Iniciação</a></li>
-  <li><a href="1classe.html">1ª Classe</a></li>
-  <li><a href="2classe.html">2ª Classe</a></li>
-  <li><a href="3classe.html">3ª Classe</a></li>
-  <li><a href="4classe.html">4ª Classe</a></li>
-  <li><a href="5classe.html">5ª Classe</a></li>
-  <li><a href="6classe.html">6ª Classe</a></li>
-  </ul>
-</li>
-<li><a href="professores.html">Professores</a></li>
-<li><a href="alfabetizacao.html">Alfabetização</a></li>
-<li><a href="pautas.html">Pautas</a></li>
-<li><a href="atividades.html">Atividades</a></li>
-<li><a href="galeria.html">Galeria</a></li>
-<li><a href="calendario.html">Calendário</a></li>
-<li><a href="missao.html">Missão & Visão</a></li>
-<li><a href="avisos.html">Avisos</a></li>
-<li><a href="ingles.html">Inglês</a></li>
-<li><a 
-  
-href="contactos.html">Contactos</a></li>
-</ul>
-</nav>
-<div class="container">
-<h2>Bem-vindo à EXPLICAÇÃO GUITO</h2>
-<p>Educar com amor, disciplina e excelência. Aqui encontras todas as informações das classes, matérias e pautas dos alunos.</p>
-<div class="aviso">
-<strong>Último Aviso:</strong> Reunião de pais - Sexta-feira às 15h na escola.
+
+<button class="secao-btn" onclick="toggle('ensino')">📚 Ensino VER ▼</button>
+<div id="ensino" class="subsecoes">
+  <a href="ensino-primario.html">Ensino Primário</a>
+  <a href="alfabetizacao.html">Alfabetização</a>
+  <a href="ingles.html">Inglês</a>
 </div>
-<h3>Ensino Primário</h3>
-<p>Clica em "Ensino Primário" no menu acima e escolhe a classe do teu filho. Lá dentro tens 2 botões: <b>Matérias</b> e <b>Pautas</b>.</p>
-<p><b>Nota:</b> Iniciação: 7 áreas. 1ª a 4ª classe: 5 disciplinas. 5ª e 6ª classe: 9 disciplinas.</p>
+
+<button class="secao-btn" onclick="toggle('academico')">📝 Académico VER ▼</button>
+<div id="academico" class="subsecoes">
+  <a href="pautas.html">Pautas</a>
+  <a href="atividades.html">Atividades</a>
+  <a href="calendario.html">Calendário</a>
 </div>
-<footer>Contacto: 923 XXX | Luanda, Angola | 2026</footer>
+
+<button class="secao-btn" onclick="toggle('institucional')">🏫 Institucional VER ▼</button>
+<div id="institucional" class="subsecoes">
+  <a href="professores.html">Professores</a>
+  <a href="missao-visao.html">Missão & Visão</a>
+  <a href="galeria.html">Galeria</a>
+</div>
+
+<button class="secao-btn" onclick="toggle('info')">ℹ️ Info VER ▼</button>
+<div id="info" class="subsecoes">
+  <a href="avisos.html">Avisos</a>
+  <a href="contactos.html">Contactos</a>
+</div>
+
+<script>
+function toggle(id) {
+  var x = document.getElementById(id);
+  x.style.display = x.style.display === "block" ? "none" : "block";
+}
+</script>
+
 </body>
 </html>
