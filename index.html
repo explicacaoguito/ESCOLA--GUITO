@@ -18,21 +18,22 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 .menu-lateral a:hover{background:#e3f2fd;font-weight:bold}
 .container{padding:25px 20px;max-width:650px;margin:auto}
 .titulo-secao{color:#0d47a1;text-align:center;margin:40px 0 20px;font-size:26px}
-.classes-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:15px; margin-bottom:40px}
-.classe-card{background:white; padding:20px; border-radius:12px; border-left:5px solid #25D366; box-shadow:0 3px 10px rgba(0,0,0,0.08)}
-.classe-card h3{margin-top:0; color:#0d47a1; font-size:20px; margin-bottom:10px}
-.classe-card ul{margin:0 0 0 20px; line-height:2; color:#333}
 .info-box{background:white;padding:25px;border-radius:12px;margin-bottom:20px;box-shadow:0 3px 10px rgba(0,0,0,0.08)}
 .info-box h3{color:#0d47a1;margin-bottom:12px;font-size:18px}
 .info-box p{line-height:1.7;color:#444}
+.classes-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:15px; margin-bottom:20px}
+.classe-card{background:white; padding:18px; border-radius:12px; border-left:5px solid #25D366; box-shadow:0 3px 10px rgba(0,0,0,0.08); margin-bottom:15px}
+.classe-card h3{margin-top:0; color:#0d47a1; font-size:18px; margin-bottom:8px}
+.classe-card ul{margin:0 0 0 18px; line-height:1.8; color:#333; font-size:14px}
 .bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:#0d47a1;display:flex;justify-content:space-around;padding:12px 0;color:white;font-size:11px;text-align:center;z-index:100}
 .bottom-nav div{cursor:pointer;flex:1}
 .bottom-nav div:active{opacity:0.8;background:#1565c0}
 .bottom-nav span{font-size:26px;display:block;margin-bottom:4px}
 .bottom-nav small{display:block;font-weight:bold;line-height:1.2}
 .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:1000;overflow-y:auto}
-.modal-content{background:white;margin:50px auto;padding:25px;border-radius:15px;max-width:450px;position:relative}
+.modal-content{background:white;margin:30px auto;padding:25px;border-radius:15px;max-width:500px;position:relative}
 .modal-content h2{color:#0d47a1;margin-bottom:15px}
+.modal-content h3{color:#1976d2;margin-top:20px;margin-bottom:10px;font-size:16px}
 .modal-content p{line-height:1.6;color:#333;margin-bottom:10px}
 .fechar-modal{position:absolute;top:10px;right:15px;font-size:28px;color:#999;cursor:pointer}
 .fechar-modal:hover{color:#000}
@@ -50,7 +51,7 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <!-- MENU LATERAL ATUALIZADO -->
 <div id="menu" class="menu-lateral">
 <div class="fechar" onclick="fecharMenu()">✕ Fechar</div>
-<a href="#ensino" onclick="fecharMenu()">📚 Ensino Primário</a>
+<a href="#" onclick="abrirModal('modalInicio'); fecharMenu()">📚 Ensino Primário</a>
 <a href="#" onclick="alert('Página Professores')">👨‍🏫 Professores</a>
 <a href="#" onclick="alert('Página Campanhas')">📣 Campanhas</a>
 <a href="#" onclick="alert('Página Avisos')">📢 Avisos</a>
@@ -59,34 +60,96 @@ body{font-family:Arial,sans-serif;background:#f5f7fa;padding-bottom:80px}
 <a href="#" onclick="alert('Informações Gerais')">ℹ️ Informações Gerais</a>
 <a href="alfabetizacao.html">✏️ Alfabetização</a>
 <a href="ingles.html">🌎 Inglês</a>
-<a href="https://wa.me/244942328972" target="_blank">💬 Contactos</a>
+<a href="https://wa.me/244942328972" target="_blank">💬 Contacto WhatsApp</a>
 </div>
 
 <div class="container">
 
-<!-- ENSINO PRIMÁRIO NO MEIO, TIREI NOTÍCIAS E O RESTO -->
-<h2 class="titulo-secao" id="ensino">📚 Ensino Primário</h2>
+<!-- NO MEIO SÓ NOTÍCIAS -->
+<h2 class="titulo-secao" id="noticias">📰 Notícias</h2>
 
-<div class="classes-grid">
-<div class="classe-card"><h3>1ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Plástica</li></ul></div>
-<div class="classe-card"><h3>2ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Musical</li></ul></div>
-<div class="classe-card"><h3>3ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Inglês</li></ul></div>
-<div class="classe-card"><h3>4ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li></ul></div>
-<div class="classe-card"><h3>5ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Educação Visual</li></ul></div>
-<div class="classe-card"><h3>6ª Classe</h3><ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Informática</li></ul></div>
+<div class="info-box">
+<h3>17 Abril 2026</h3>
+<p>Inscrições abertas para o ano letivo 2026! Vagas limitadas.</p>
+</div>
+
+<div class="info-box">
+<h3>10 Abril 2026</h3>
+<p>Reunião de pais e encarregados dia 25/04 às 15h no centro.</p>
+</div>
+
+<div class="info-box">
+<h3>05 Abril 2026</h3>
+<p>Feira de ciências marcada para o próximo mês. Participem!</p>
 </div>
 
 </div>
 
 <!-- BOTÕES DE BAIXO -->
 <div class="bottom-nav">
-<div onclick="window.location='index.html'"><span>🏠</span><small>Início</small></div>
+<div onclick="abrirModal('modalInicio')"><span>🏠</span><small>Início</small></div>
 <div onclick="abrirModal('modalMatriculas')"><span>📝</span><small>Matrículas</small></div>
 <div onclick="abrirModal('modalReconfirmação')"><span>📄</span><small>Reconfirmação</small></div>
 <div onclick="abrirModal('modalPropinas')"><span>💰</span><small>Propinas</small></div>
 </div>
 
-<!-- MODAIS -->
+<!-- MODAL INÍCIO COM TUDO DO MENU -->
+<div id="modalInicio" class="modal">
+<div class="modal-content">
+<span class="fechar-modal" onclick="fecharModal('modalInicio')">×</span>
+<h2>📚 Ensino Primário</h2>
+
+<div class="classe-card">
+<h3>1ª Classe</h3>
+<ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Plástica</li></ul>
+</div>
+
+<div class="classe-card">
+<h3>2ª Classe</h3>
+<ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Expressão Musical</li></ul>
+</div>
+
+<div class="classe-card">
+<h3>3ª Classe</h3>
+<ul><li>Matemática</li><li>Língua Portuguesa</li><li>Estudo do Meio</li><li>Educação Moral e Cívica</li><li>Inglês</li></ul>
+</div>
+
+<div class="classe-card">
+<h3>4ª Classe</h3>
+<ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li></ul>
+</div>
+
+<div class="classe-card">
+<h3>5ª Classe</h3>
+<ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Educação Visual</li></ul>
+</div>
+
+<div class="classe-card">
+<h3>6ª Classe</h3>
+<ul><li>Matemática</li><li>Língua Portuguesa</li><li>Ciências Naturais</li><li>História</li><li>Geografia</li><li>Inglês</li><li>Informática</li></ul>
+</div>
+
+<h3>👨‍🏫 Professores</h3>
+<p>Corpo docente qualificado com experiência em ensino primário.</p>
+
+<h3>📣 Campanhas</h3>
+<p>Promoções especiais para matrículas e descontos para irmãos.</p>
+
+<h3>📢 Avisos</h3>
+<p>Fica atento aos comunicados importantes do centro.</p>
+
+<h3>📊 Pautas</h3>
+<p>Consulta das notas mensais e trimestrais dos alunos.</p>
+
+<h3>ℹ️ Sobre</h3>
+<p>Fundado em 2018 pelo Professor Guito. Mais de 300 alunos formados.</p>
+
+<h3>ℹ️ Informações Gerais</h3>
+<p><b>Horário:</b> Manhã 7h30-12h00 | Tarde 13h00-17h30 | Sábado 8h00-12h00</p>
+</div>
+</div>
+
+<!-- MODAIS DOS OUTROS BOTÕES -->
 <div id="modalMatriculas" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalMatriculas')">×</span><h2>📝 Matrículas</h2><p><b>Matrículas a partir de 500 kwanzas</b></p><p>Visita-nos para mais detalhes e condições especiais.</p></div></div>
 
 <div id="modalReconfirmação" class="modal"><div class="modal-content"><span class="fechar-modal" onclick="fecharModal('modalReconfirmação')">×</span><h2>📄 Reconfirmação</h2><p><b>A partir do mês de Agosto começam as Reconfirmações e as matrículas.</b></p><p>Traz a caderneta do aluno para confirmar a vaga.</p></div></div>
